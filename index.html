@@ -124,16 +124,12 @@
         }
         .btn-play { background-color: var(--secondary-color); }
         .btn-play:hover:not(:disabled) { background-color: #27ae60; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4); transform: translateY(-2px); }
-
         .btn-check { background-color: var(--primary-color); }
         .btn-check:hover:not(:disabled) { background-color: var(--primary-dark); box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4); transform: translateY(-2px); }
-        
         .btn-hint { background-color: var(--accent-color); color: var(--text-color); }
         .btn-hint:hover:not(:disabled) { background-color: #f39c12; box-shadow: 0 4px 15px rgba(241, 196, 15, 0.4); transform: translateY(-2px); }
-        
         .btn-reset { background-color: var(--light-text); }
         .btn-reset:hover:not(:disabled) { background-color: #95a5a6; box-shadow: 0 4px 15px rgba(127, 140, 141, 0.4); transform: translateY(-2px); }
-
         button:disabled {
             background-color: #bdc3c7;
             cursor: not-allowed;
@@ -255,15 +251,15 @@
     <script>
         const sentences = [
             { en: "Are you planning a holiday?", vi: "Bạn đang lên kế hoạch cho một kỳ nghỉ à?" },
-            { en: "Then you should visit Ðà Lạt.", vi: "Vậy thì bạn nên ghé thăm Đà Lạt." },
-            { en: "This city is in Lâm Ðồng Province, in the Central Highlands of Việt Nam.", vi: "Thành phố này nằm ở tỉnh Lâm Đồng, thuộc Tây Nguyên của Việt Nam." },
+            { en: "Then you should visit Đà Lạt.", vi: "Vậy thì bạn nên ghé thăm Đà Lạt." }, // Đã sửa ký tự trong đáp án gốc
+            { en: "This city is in Lâm Đồng Province, in the Central Highlands of Việt Nam.", vi: "Thành phố này nằm ở tỉnh Lâm Đồng, thuộc Tây Nguyên của Việt Nam." }, // Đã sửa ký tự trong đáp án gốc
             { en: "It doesn’t matter if you like the exciting city life or the quiet countryside.", vi: "Không quan trọng bạn thích cuộc sống thành phố sôi động hay vùng nông thôn yên tĩnh." },
-            { en: "Ðà Lạt has the best of both worlds.", vi: "Đà Lạt có cả hai điều tuyệt vời này." },
+            { en: "Đà Lạt has the best of both worlds.", vi: "Đà Lạt có cả hai điều tuyệt vời này." }, // Đã sửa ký tự trong đáp án gốc
             { en: "It has a small population of about 425,000 people.", vi: "Nó có dân số nhỏ khoảng 425.000 người." },
             { en: "There aren’t many crowds and everyone is friendly.", vi: "Không có nhiều đám đông và mọi người đều thân thiện." },
             { en: "There are lots of things to see and do.", vi: "Có rất nhiều thứ để xem và làm." },
-            { en: "People gave Ðà Lạt its nickname ’The City of Thousand Flowers’.", vi: "Người ta đặt cho Đà Lạt biệt danh 'Thành phố ngàn hoa'." },
-            { en: "During the day, you can visit Ðà Lạt Flower Park.", vi: "Vào ban ngày, bạn có thể ghé thăm Công viên Hoa Đà Lạt." },
+            { en: "People gave Đà Lạt its nickname ’The City of Thousand Flowers’.", vi: "Người ta đặt cho Đà Lạt biệt danh 'Thành phố ngàn hoa'." }, // Đã sửa ký tự trong đáp án gốc
+            { en: "During the day, you can visit Đà Lạt Flower Park.", vi: "Vào ban ngày, bạn có thể ghé thăm Công viên Hoa Đà Lạt." }, // Đã sửa ký tự trong đáp án gốc
             { en: "You can also go for a walk along Xuân Hương Lake to enjoy the beauty of nature.", vi: "Bạn cũng có thể đi dạo dọc Hồ Xuân Hương để tận hưởng vẻ đẹp của thiên nhiên." },
             { en: "At night, you can go shopping at the night market.", vi: "Vào ban đêm, bạn có thể đi mua sắm tại chợ đêm." },
             { en: "During festivals, you can see lots of street performances.", vi: "Trong các lễ hội, bạn có thể xem rất nhiều màn trình diễn đường phố." },
@@ -288,14 +284,14 @@
             { en: "It has a population of around 9 thousand people.", vi: "Nó có dân số khoảng 9 nghìn người." },
             { en: "They usually get around by bikes, motorbikes or on foot.", vi: "Họ thường đi lại bằng xe đạp, xe máy hoặc đi bộ." },
             // --- NEW SENTENCES ADDED BELOW ---
-            { en: "Hanoi is the capital of Vietnam.", vi: "Hà Nội là thủ đô của Việt Nam." },
-            { en: "Da Lat is a small city in the Central Highlands.", vi: "Đà Lạt là một thành phố nhỏ ở Tây Nguyên." },
-            { en: "Ho Chi Minh City has a population of about nine million people.", vi: "Thành phố Hồ Chí Minh có dân số khoảng chín triệu người." },
+            { en: "Hà Nội is the capital of Việt Nam.", vi: "Hà Nội là thủ đô của Việt Nam." }, 
+            { en: "Đà Lạt is a small city in the Central Highlands.", vi: "Đà Lạt là một thành phố nhỏ ở Tây Nguyên." },
+            { en: "Hồ Chí Minh City has a population of about nine million people.", vi: "Thành phố Hồ Chí Minh có dân số khoảng chín triệu người." },
             { en: "Visitors can visit the Old Quarter and enjoy local food.", vi: "Du khách có thể ghé thăm Phố cổ và thưởng thức ẩm thực địa phương." },
-            { en: "Da Nang is a city full of sandy beaches and modern bridges.", vi: "Đà Nẵng là một thành phố đầy những bãi biển cát và những cây cầu hiện đại." },
-            { en: "Hue has historic buildings and beautiful gardens.", vi: "Huế có những tòa nhà lịch sử và những khu vườn xinh đẹp." },
-            { en: "Ha Long Bay has something for everyone.", vi: "Vịnh Hạ Long có thứ gì đó dành cho tất cả mọi người." },
-            { en: "Hoi An is the perfect place for taking photos.", vi: "Hội An là nơi hoàn hảo để chụp ảnh." },
+            { en: "Đà Nẵng is a city full of sandy beaches and modern bridges.", vi: "Đà Nẵng là một thành phố đầy những bãi biển cát và những cây cầu hiện đại." },
+            { en: "Huế has historic buildings and beautiful gardens.", vi: "Huế có những tòa nhà lịch sử và những khu vườn xinh đẹp." },
+            { en: "Hạ Long Bay has something for everyone.", vi: "Vịnh Hạ Long có thứ gì đó dành cho tất cả mọi người." },
+            { en: "Hội An is the perfect place for taking photos.", vi: "Hội An là nơi hoàn hảo để chụp ảnh." },
             { en: "Nha Trang is the perfect place for relaxing and swimming.", vi: "Nha Trang là nơi hoàn hảo để thư giãn và bơi lội." },
         ];
         let playerName = '';
@@ -364,6 +360,38 @@
             if (playTimeout) clearTimeout(playTimeout);
         }
 
+        /**
+         * Robust text normalization function to handle case, spacing, punctuation, AND diacritics (Vietnamese accents).
+         */
+        const normalizeText = (str) => {
+            if (typeof str !== 'string') return '';
+            
+            // 1. Convert diacritics (accents) to base letters (e.g., 'à' -> 'a', 'é' -> 'e').
+            // Normalize('NFD') separates the base letter from the accent mark, then the regex removes the accent mark.
+            str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); 
+            
+            // 2. Specifically replace all forms of D-stroke (Vietnamese Đ/đ and Eth Ð/ð) with D/d.
+            // This is the CRITICAL fix for the 'Đ' issue reported by the user.
+            // Replace all uppercase D-strokes with 'D'
+            str = str.replace(/[ĐÐ]/g, 'D'); 
+            // Replace all lowercase d-strokes with 'd'
+            str = str.replace(/[đð]/g, 'd'); 
+
+            // 3. Normalize apostrophes (e.g., ’ to ')
+            str = str.replace(/[’‘`]/g, "'");
+            
+            // 4. Convert to lowercase and trim
+            str = str.toLowerCase().trim();
+            
+            // 5. Remove all punctuation marks (except standardized apostrophe)
+            str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_~()?"<>[\]|@+]/g,"");
+            
+            // 6. Normalize multiple spaces to single space
+            str = str.replace(/\s{2,}/g," ");
+            
+            return str;
+        };
+        
         // Main function to check the user's answer
         function checkAnswer() {
             const checkBtn = document.getElementById('checkBtn');
@@ -372,11 +400,8 @@
             const result = document.getElementById('result');
             const currentSentence = sentences[currentSentenceIndex];
             
-            // Function to normalize apostrophes (', ` vs ’) for comparison
-            const normalizeApostrophes = (str) => str.replace(/[’‘`]/g, "'");
-
-            // Compare normalized strings, ignoring case
-            if (normalizeApostrophes(userInput).toLowerCase() === normalizeApostrophes(currentSentence.en).toLowerCase()) {
+            // Compare normalized strings using the robust function
+            if (normalizeText(userInput) === normalizeText(currentSentence.en)) {
                 stopSpeech();
                 checkBtn.disabled = true;
                 document.getElementById('hintBtn').disabled = true;
@@ -573,6 +598,7 @@
         // Resets the game to the initial state
         function resetGame() {
             stopSpeech();
+            document.getElementById('reviewModal').style.display = 'none'; // Ensure modal is closed
             document.getElementById('game-container').innerHTML = `
                 <h1>Viết chính tả Unit 1 - Skills- RO8</h1>
                 <p>Please enter your name to start. (Vui lòng nhập tên của bạn để bắt đầu.)</p>
